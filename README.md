@@ -1,4 +1,4 @@
-# 📅 Attendance Tracker Pro (v1.1)
+# 📅 Attendance Tracker Pro (v1.2)
 
 [![Python](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white)](https://www.python.org)
 [![PySide6](https://img.shields.io/badge/UI-PySide6-green.svg?logo=qt&logoColor=white)](https://pypi.org/project/PySide6/)
@@ -8,7 +8,7 @@
 
 ---
 
-## 🎨 v1.1 Yenilikleri: Dark Aesthetic
+## 🎨 v1.2 Yenilikleri: Dark Aesthetic
 - **🌑 Deep Charcoal Tema:** Göz yormayan, modern karanlık arayüz.
 - **✨ Dinamik Butonlar:** Gradient (geçişli) renkler ve hover (üzerine gelme) efektleri.
 - **📅 Haftalık Navigasyon:** 12 Ocak 2026 başlangıçlı eğitim dönemine tam uyumlu takvim sistemi.
@@ -20,7 +20,7 @@
 
 ```bash
 # Depoyu klonlayın
-git clone [https://github.com/u-kozmai/python-attendance-app.git](https://github.com/u-kozmai/python-attendance-app.git)
+git clone "https://github.com/u-kozmai/python-attendance-app.git"
 cd python-attendance-app
 
 # Bağımlılıkları kurun (Venv aktifken)
