@@ -18,7 +18,8 @@ class DevamsizlikApp(QMainWindow):
         self.resize(1200, 750)
         self.dersler = Storage.yukle()
         self.baslangic_tarihi = date(2026, 1, 12)
-
+        with open("style.qss", "r", encoding="utf-8") as f:
+                self.setStyleSheet(f.read())
         # Ana Sekme Yapısı
         self.tabs = QTabWidget()
         self.setCentralWidget(self.tabs)
@@ -151,14 +152,16 @@ class DevamsizlikApp(QMainWindow):
             for ders in self.dersler:
                 if gun_adi in ders.gunler:
                     btn = QPushButton(f"{ders.ad}\n({ders.gunler[gun_adi]} Saat)")
+                    btn.setObjectName("DersButonu")
                     btn.setMinimumHeight(60)
                     
                     # Duruma göre renk ayarla
                     if ders.devamsizlik_var_mi(tarih_str):
-                        btn.setStyleSheet("background-color: #e74c3c; color: white; border-radius: 5px;")
+                        # Pastel/Neon Kırmızı Gradient
+                        btn.setStyleSheet("background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #ff5252, stop:1 #b71c1c);")
                     else:
-                        btn.setStyleSheet("background-color: #2ecc71; color: white; border-radius: 5px;")
-                    
+                        # Pastel/Neon Yeşil Gradient
+                        btn.setStyleSheet("background-color: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #66bb6a, stop:1 #2e7d32);")          
                     # Tıklama olayını bağla (Closure kullanarak)
                     btn.clicked.connect(lambda checked=False, d=ders, t=tarih_str: self.devamsizlik_toggle(d, t))
                     refs["layout"].insertWidget(refs["layout"].count()-1, btn)

@@ -1,17 +1,30 @@
-# 📅 Linux Devamsızlık Takip Sistemi
+# 📅 Attendance Tracker Pro (v1.1)
 
-Üniversite öğrencileri için geliştirilmiş, Python ve PySide6 (Qt) tabanlı modern bir ders takip ve devamsızlık hesaplama uygulaması. 
+[![Python](https://img.shields.io/badge/Python-3.12-blue.svg?logo=python&logoColor=white)](https://www.python.org)
+[![PySide6](https://img.shields.io/badge/UI-PySide6-green.svg?logo=qt&logoColor=white)](https://pypi.org/project/PySide6/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## ✨ Özellikler
-- **Haftalık Ajanda Görünümü:** Haftalık program üzerinden dersleri tek tıkla işaretleme.
-- **Otomatik Hesaplama:** %70 (veya seçilen) devam zorunluluğuna göre kalan devamsızlık hakkını saat bazında hesaplar.
-- **Dinamik Takvim:** 12 Ocak 2026 başlangıçlı 12 haftalık dönemi otomatik yönetir.
-- **Kalıcı Veri:** Tüm ders bilgileri ve geçmiş `dersler.json` dosyasında saklanır.
-- **Modern Arayüz:** Sekmeli yapı ve kullanıcı dostu renkli butonlar.
+Üniversite devamsızlıklarınızı yönetmenin en şık yolu. v1.1 sürümüyle birlikte tamamen yenilenen **Karanlık Tema** ve **Estetik Arayüz** ile Linux masaüstünüze uyum sağlar.
+
+---
+
+## 🎨 v1.1 Yenilikleri: Dark Aesthetic
+- **🌑 Deep Charcoal Tema:** Göz yormayan, modern karanlık arayüz.
+- **✨ Dinamik Butonlar:** Gradient (geçişli) renkler ve hover (üzerine gelme) efektleri.
+- **📅 Haftalık Navigasyon:** 12 Ocak 2026 başlangıçlı eğitim dönemine tam uyumlu takvim sistemi.
+- **🚀 Performans:** QSS (Qt Style Sheets) kullanımıyla daha hızlı ve temiz kod yapısı.
+
+---
 
 ## 🚀 Kurulum
 
-1. Depoyu klonlayın:
-   ```bash
-   git clone [https://github.com/u-kozmai/ders-takip.git](https://github.com/u-kozmai/ders-takip.git)
-   cd ders-takip
+```bash
+# Depoyu klonlayın
+git clone [https://github.com/u-kozmai/python-attendance-app.git](https://github.com/u-kozmai/python-attendance-app.git)
+cd python-attendance-app
+
+# Bağımlılıkları kurun (Venv aktifken)
+pip install -r requirements.txt
+
+# Uygulamayı çalıştırın
+python main.py
