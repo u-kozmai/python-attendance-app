@@ -1,6 +1,7 @@
-/* Ana Pencere - Kömür Siyahı */
-QMainWindow {
+/* Ana Pencere ve Diyaloglar - Kömür Siyahı */
+QMainWindow, QDialog {
     background-color: #121212;
+    color: #e0e0e0;
 }
 
 /* Sekme Paneli (Tabs) */
@@ -33,30 +34,121 @@ QFrame {
     border: 1px solid #2d2d2d;
 }
 
+/* Grup Kutuları (Ayarlar ve Ders Ekle Penceresi) */
+QGroupBox {
+    background-color: #1a1a1a;
+    border: 1px solid #2d2d2d;
+    border-radius: 12px;
+    margin-top: 14px;
+    padding: 14px;
+    font-weight: bold;
+    color: #64b5f6;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 14px;
+    padding: 0 6px;
+}
+
 /* Yazı Etiketleri */
 QLabel {
     color: #e0e0e0;
 }
 
-/* --- DERS BUTONLARI (DARK UI SİHRİ) --- */
+QLabel#DonemBilgiEtiketi {
+    color: #90caf9;
+    font-size: 13px;
+    padding-left: 12px;
+}
+
+QLabel#BilgiEtiketi {
+    color: #b0bec5;
+    background-color: #232323;
+    border: 1px solid #2f2f2f;
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-weight: normal;
+}
+
+/* Form Elemanları */
+QLineEdit, QSpinBox, QDoubleSpinBox, QDateEdit {
+    background-color: #252525;
+    color: #ffffff;
+    border: 1px solid #383838;
+    border-radius: 6px;
+    padding: 6px 8px;
+}
+
+QLineEdit:focus, QSpinBox:focus, QDoubleSpinBox:focus, QDateEdit:focus {
+    border: 1px solid #1e88e5;
+}
+
+QSpinBox:disabled, QDoubleSpinBox:disabled {
+    background-color: #1b1b1b;
+    color: #707070;
+    border: 1px solid #2a2a2a;
+}
+
+QCheckBox, QRadioButton {
+    color: #e0e0e0;
+    spacing: 8px;
+}
+
+/* Ana Aksiyon Butonları */
+QPushButton {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #3d3d3d;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #383838;
+}
+
+QPushButton#PrimaryButon {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #1e88e5, stop:1 #1565c0);
+    border: none;
+    color: #ffffff;
+    padding: 9px 18px;
+}
+
+QPushButton#PrimaryButon:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #42a5f5, stop:1 #1976d2);
+}
+
+QPushButton#SilButonu {
+    background-color: #b71c1c;
+    border: none;
+    border-radius: 6px;
+    padding: 4px 12px;
+    color: #ffffff;
+}
+
+QPushButton#SilButonu:hover {
+    background-color: #d32f2f;
+}
+
+/* --- SAATLİK DERS KUTUCUKLARI (DARK UI) --- */
 QPushButton#DersButonu {
     border: none;
     border-radius: 10px;
     color: white;
     font-weight: bold;
     font-size: 13px;
-    min-height: 50px;
+    min-height: 48px;
+    padding: 6px;
 }
 
-/* Hover: Parlama efekti */
 QPushButton#DersButonu:hover {
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    /* Üstüne gelince çok hafif aydınlanma */
+    border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-/* Pressed: Derinlik hissi */
 QPushButton#DersButonu:pressed {
-    margin-top: 4px;
+    margin-top: 3px;
     margin-bottom: 0px;
 }
 
@@ -74,14 +166,5 @@ QHeaderView::section {
     padding: 8px;
     border: 1px solid #2d2d2d;
     font-weight: bold;
-    color: #1e88e5; /* Başlıklar elektrik mavisi */
-}
-
-/* Hafta Seçici (SpinBox) */
-QSpinBox {
-    background-color: #252525;
-    color: white;
-    border: 1px solid #2d2d2d;
-    border-radius: 5px;
-    padding: 5px;
+    color: #1e88e5;
 }

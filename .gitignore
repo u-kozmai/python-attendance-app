@@ -3,5 +3,6 @@ venv/
 __pycache__/
 *.pyc
 dersler.json
+ayarlar.json
 .vscode/
 .idea/
